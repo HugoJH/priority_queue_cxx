@@ -119,7 +119,7 @@ namespace fc_pq {
 
     void checkVersion() throw() {
       if(version != pqueue->version) {
-        throw PQueueException("FastContainers::PriorityQueue - a change in the priority queue invalidated the current iterator.");
+        std::terminate();
       }
     }
   } PQueueImplIterator;
